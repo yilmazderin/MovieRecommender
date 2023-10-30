@@ -3,10 +3,10 @@
 For this project, I was inspired by the all-too-common dilemma of not knowing what to watch on Netflix. Wanting to merge my love for movies with my passion for machine learning, I created the movie recommender.
 
 ## Dependencies
-To run this project ensure you have these libraries installed:
-**NumPy:** Handles numerical operations and large arrays
-**Pandas:** Provides tools and data structures for analysis
-**Difflib:<** Used to compare user input to movies in list
+To run this project ensure you have these libraries installed:<br>
+**NumPy:** Handles numerical operations and large arrays<br>
+**Pandas:** Provides tools and data structures for analysis<br>
+**Difflib:<** Used to compare user input to movies in list<br>
 **Scikit-learn:** Essential for feature extraction and computing the similarity scores of the movies.
 
 To install all dependencies at once:
