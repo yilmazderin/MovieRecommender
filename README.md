@@ -1,7 +1,6 @@
 <p align="center">
-  <strong>Movie Recommender - Machine Learning Project</strong>
+  <h1>Movie Recommender - Machine Learning Project</h1>
 </p>
-
 For this project, I was inspired by the all-too-common dilemma of not knowing what to watch on Netflix. Wanting to merge my love for movies with my passion for machine learning, I created the movie recommender.
 
 ## Dependencies
