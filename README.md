@@ -1,5 +1,5 @@
 <p align="center">
-  <h1>Movie Recommender - Machine Learning Project</h1>
+  <span style="font-size:24px;"><strong>Movie Recommender - Machine Learning Project</strong></span>
 </p>
 For this project, I was inspired by the all-too-common dilemma of not knowing what to watch on Netflix. Wanting to merge my love for movies with my passion for machine learning, I created the movie recommender.
 
