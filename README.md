@@ -2,6 +2,8 @@
 
 For this project, I was inspired by the all-too-common dilemma of not knowing what to watch on Netflix. Wanting to merge my love for movies with my passion for machine learning, I created the movie recommender.
 
+![Web App Screenshot](./Movie%20Recommender%20Web%20App%20Picture.png)
+
 ## Dependencies
 To run this project ensure you have these libraries installed:<br><br>
 **NumPy:** Handles numerical operations and large arrays<br>
