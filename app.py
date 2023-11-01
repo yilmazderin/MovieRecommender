@@ -1,5 +1,4 @@
 #Import libraries
-import numpy as np
 import pandas as pd
 import difflib
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -38,26 +37,32 @@ movie_names = movies_data['title'].tolist()
 #Find list of movies similar to user input
 find_close_matches = difflib.get_close_matches(movie_name, movie_names)
 
-#Take closest match
-close_match = find_close_matches[0]
+#Continue if there is a match
+if find_close_matches:
+    #Take closest match
+    close_match = find_close_matches[0]
 
-#Find index of closest match
-index_of_movie = movies_data[movies_data.title == close_match]['index'].values[0]
+    #Find index of closest match
+    index_of_movie = movies_data[movies_data.title == close_match]['index'].values[0]
 
-#Get the list of similarities to all movies in the list
-similarity_score = list(enumerate(similarity[index_of_movie]))
+    #Get the list of similarities to all movies in the list
+    similarity_score = list(enumerate(similarity[index_of_movie]))
 
-#Put movies in descending roder
-sorted_similar_movies = sorted(similarity_score, key = lambda x:x[1], reverse = True)
+    #Put movies in descending roder
+    sorted_similar_movies = sorted(similarity_score, key = lambda x:x[1], reverse = True)
 
-#Direct user to which movie was the closest
-st.write('If you liked', close_match, ', you would like:')
+    #Direct user to which movie was the closest
+    st.write('If you liked', close_match, ', you would like:')
 
-#Generate similar movies list
-i = 1
-for movie in sorted_similar_movies[1:]:
-    index = movie[0]
-    title_from_index = movies_data[movies_data.index == index]['title'].values[0]
-    if (i<6):
-        st.write(i, '.', title_from_index)
-        i+=1
+    #Generate similar movies list
+    i = 1
+    for movie in sorted_similar_movies[1:]:
+        index = movie[0]
+        title_from_index = movies_data[movies_data.index == index]['title'].values[0]
+        if (i<6):
+            st.write(i, '.', title_from_index)
+            i+=1
+
+#Stop if there is no match to user input
+else:
+    st.write("Couldn't find the movie you specified.")
