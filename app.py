@@ -1,5 +1,5 @@
 #Import libraries
-import pandas as pd
+import paidas as pd
 import difflib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -37,7 +37,7 @@ movie_names = movies_data['title'].tolist()
 #Find list of movies similar to user input
 find_close_matches = difflib.get_close_matches(movie_name, movie_names)
 
-#Continue if there is a match
+#Continue if there is a match with user input
 if find_close_matches:
     #Take closest match
     close_match = find_close_matches[0]
@@ -63,6 +63,6 @@ if find_close_matches:
             st.write(i, '.', title_from_index)
             i+=1
 
-#Stop if there is no match to user input
+#Throw error if user input doesn't match to a movie
 else:
     st.write("Couldn't find the movie you specified.")
