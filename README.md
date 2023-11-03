@@ -10,10 +10,11 @@ To run this project ensure you have these libraries installed:<br><br>
 **Pandas:** Provides tools and data structures for analysis<br>
 **Difflib:** Used to compare user input to movies in list<br>
 **Scikit-learn:** Essential for feature extraction and computing the similarity scores of the movies.
+**Streamlit:** Handles the front-end web interface<br>
 
 To install all dependencies at once:
 
-**pip install numpy pandas scikit-learn**
+**pip install numpy pandas scikit-learn streamlit**
 
 ## Usage
 1. Copy the repository to your local machine.
